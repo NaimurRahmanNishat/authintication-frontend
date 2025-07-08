@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NeonGradientCard } from "@/components/ui/NeonGradientCard";
 import { useForm } from "react-hook-form"; // Assuming you're using React Hook Form
+import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
   const { register, handleSubmit } = useForm();
@@ -55,12 +56,12 @@ const ForgotPassword = () => {
           {/* Optional: Add a link back to login */}
           <p className="mt-6 text-center text-sm text-gray-600">
             Remember your password?{" "}
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="font-medium text-blue-600 hover:underline hover:text-blue-500"
             >
               Back to Login
-            </a>
+            </Link>
           </p>
         </div>
       </NeonGradientCard>
